@@ -4,7 +4,7 @@ import java.lang.*;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class TestMass {
+public class TestTask1 {
     public int Mass() {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
@@ -15,7 +15,7 @@ public class TestMass {
             mass[i] = Math.random()*10;
             summ = summ + mass[i];
         }
-        System.out.println(summ);
+        System.out.println("Sum of elements = " + summ);
         return 0;
     }
 }
