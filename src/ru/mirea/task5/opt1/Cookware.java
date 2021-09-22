@@ -1,6 +1,6 @@
-package ru.mirea.task5;
+package ru.mirea.task5.opt1;
 
-public class Cookware extends Dish{
+public class Cookware extends Dish {
     private int depth = 0;
     private int diameter = 0;
     public Cookware(int depth, int diameter)

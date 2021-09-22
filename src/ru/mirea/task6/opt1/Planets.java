@@ -1,4 +1,6 @@
-package ru.mirea.task6;
+package ru.mirea.task6.opt1;
+
+import ru.mirea.task6.opt1.Nameable;
 
 public class Planets implements Nameable {
     private String name;

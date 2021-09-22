@@ -1,8 +1,8 @@
-package ru.mirea.task6;
+package ru.mirea.task6.opt1;
 
-public class Animals implements Nameable{
+public class machinery implements Nameable {
     private String name;
-    public Animals(String name)
+    public machinery(String name)
     {
         this.name = name;
     }

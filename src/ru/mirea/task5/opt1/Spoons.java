@@ -1,4 +1,6 @@
-package ru.mirea.task5;
+package ru.mirea.task5.opt1;
+
+import ru.mirea.task5.opt1.Dish;
 
 public class Spoons extends Dish {
     private int length = 0;

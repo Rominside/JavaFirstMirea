@@ -1,7 +1,7 @@
 package ru.mirea.task2;
 
 public class TestTask2 {
-    public  int Test()
+    public static int main(String[] args)
     {
         Dog d1 = new Dog("Mike", 2);
         Dog d2 = new Dog("Helen", 7);
@@ -21,6 +21,11 @@ public class TestTask2 {
         Ball ba2 = new Ball("Basketball");
         ba2.setSize(64);
         System.out.println(ba1.toString());
+
+        Shape sh1 = new Shape(45,"ball");
+        System.out.println(sh1.toString());
+        sh1.setVolume(34);
+        System.out.println(sh1.getVolume());
 
         return 0;
     }

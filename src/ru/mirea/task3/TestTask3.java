@@ -7,7 +7,7 @@ import ru.mirea.task3.opt2.Legs;
 import ru.mirea.task3.opt2.Head;
 
 public class TestTask3 {
-    public int Test ()
+    public static int main (String [] args)
     {
         Circle c1 = new Circle(3, 3, 5);
        System.out.println(c1.getCentreX());

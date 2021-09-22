@@ -1,6 +1,8 @@
-package ru.mirea.task5;
+package ru.mirea.task5.opt1;
 
-public class Plates extends Dish{
+import ru.mirea.task5.opt1.Dish;
+
+public class Plates extends Dish {
     private int diameter;
 
     public Plates(int diameter)
