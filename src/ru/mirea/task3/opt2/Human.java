@@ -4,19 +4,14 @@ public abstract class Human {
     private double size;
     private double weight;
 
-    public double getSize() {
-        return size;
-    }
+    public abstract double getSize();
 
-    public double getWeight() {
-        return weight;
-    }
+    public abstract double getWeight();
 
-    public void setSize(double size) {
-        this.size = size;
-    }
+    public abstract void setSize(double size);
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+    public abstract void setWeight(double weight);
+
+    @Override
+    public abstract String toString();
 }

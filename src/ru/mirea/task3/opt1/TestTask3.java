@@ -1,4 +1,4 @@
-package ru.mirea.task3;
+package ru.mirea.task3.opt1;
 
 import ru.mirea.task3.opt1.Circle;
 import ru.mirea.task3.opt2.Hands;
