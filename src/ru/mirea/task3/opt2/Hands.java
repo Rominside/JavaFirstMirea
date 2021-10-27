@@ -10,7 +10,7 @@ public class Hands extends Human {
 
     @Override
     public void setWeight(double weight) {
-
+        this.weight = weight;
     }
 
     @Override

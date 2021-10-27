@@ -11,7 +11,7 @@ public class Legs extends Human {
 
     @Override
     public void setWeight(double weight) {
-
+        this.weight = weight;
     }
 
     @Override
