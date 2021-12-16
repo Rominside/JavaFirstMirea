@@ -1,7 +1,7 @@
 package ru.mirea.task12.opt2;
-
-//public class QuickSort {
-    /*public static void QuickSort(Student[] source, Student leftBorder, Student rightBorder) {
+/*
+public class QuickSort {
+    public static void QuickSort(Student[] source, Student leftBorder, Student rightBorder) {
         Student leftMarker = leftBorder;
         int rightMarker = rightBorder;
         int pivot = source[(leftMarker + rightMarker) / 2];
