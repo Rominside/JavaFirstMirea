@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener {
-    private static final String IP_ADDR = "192.168.137.133";
+    private static final String IP_ADDR = "100.122.156.2";
     private static final int PORT = 8189;
     private static int WIDTH = 600;
     private static int HEIGHT = 400;
@@ -31,15 +31,11 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     private  TCPConnection connection;
 
     public void UserNameExceptions () throws ClientExceptions{
-        if (fieldNickName.getText() == "fuck") throw new ClientExceptions("un correct user name", fieldNickName.getText());
-    }
 
-    public void InputUsername(){
-        try {
-            UserNameExceptions();
-        }catch (ClientExceptions e){
-            System.out.println(e.msg);
-            System.out.println(e.UserName);
+        for (int i = 0; i < fieldNickName.getText().length(); i++){
+            if (fieldNickName.getText().charAt(i) == '*'){
+                throw new ClientExceptions("Input Exception, un correct user name", fieldNickName.getText(), connection);
+            }
         }
     }
 
@@ -83,7 +79,13 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
             return;
         }
         fieldInput.setText(null);
-        connection.sendString(" " + fieldNickName.getText() + ": " + message);
+        try {
+            UserNameExceptions();
+            connection.sendString(" " + fieldNickName.getText() + ": " + message);
+        }catch (ClientExceptions exceptions){
+            System.out.println(exceptions.msg);
+            System.out.println(exceptions.UserName);
+        }
     }
 
 
@@ -93,9 +95,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     }
 
     @Override
-    public void onReceiveString(TCPConnection tcpConnection, String value) {
-        PrintMessage(value);
-    }
+    public void onReceiveString(TCPConnection tcpConnection, String value) { PrintMessage(value); }
 
     @Override
     public void onDisconnect(TCPConnection tcpConnection) {
@@ -117,9 +117,9 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                String DateMsg = Date();
-                log.append(DateMsg + msg + "\n");
-                log.setCaretPosition(log.getDocument().getLength());
+                    String DateMsg = Date();
+                    log.append(DateMsg + msg + "\n");
+                    log.setCaretPosition(log.getDocument().getLength());
             }
         });
     }
